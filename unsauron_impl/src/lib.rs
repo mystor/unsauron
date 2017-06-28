@@ -11,6 +11,7 @@ use synom::Synom;
 use syn::fold::{Folder, noop_fold_expr};
 use std::default::Default;
 
+// Wrap the given expression in an &(EXPR).
 fn sauron(e: Expr) -> Box<Expr> {
     Box::new(Expr {
         node: ExprKind::AddrOf(ExprAddrOf {
@@ -28,6 +29,7 @@ fn sauron(e: Expr) -> Box<Expr> {
     })
 }
 
+// This folder wraps each operand to any binary expressions in an &(EXPR).
 struct F;
 impl Folder for F {
     fn fold_expr(&mut self, e: Expr) -> Expr {
