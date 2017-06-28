@@ -1,0 +1,8 @@
+[package]
+name = "unsauron"
+version = "0.1.0"
+authors = ["Michael Layzell <michael@thelayzells.com>"]
+
+[dependencies]
+proc-macro-hack = "0.3.3"
+unsauron_impl = { version = "0.1.0", path = "unsauron_impl" }

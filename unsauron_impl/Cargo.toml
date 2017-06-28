@@ -1,0 +1,13 @@
+[package]
+name = "unsauron_impl"
+version = "0.1.0"
+authors = ["Michael Layzell <michael@thelayzells.com>"]
+
+[lib]
+proc-macro = true
+
+[dependencies]
+syn = { git = "https://github.com/dtolnay/syn", features = ["extra-traits", "fold", "full"] }
+synom = { git = "https://github.com/dtolnay/syn", path = "synom" }
+quote = { git = "https://github.com/dtolnay/quote" }
+proc-macro-hack = "0.3"

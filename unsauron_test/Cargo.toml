@@ -1,0 +1,7 @@
+[package]
+name = "unsauron_test"
+version = "0.1.0"
+authors = ["Michael Layzell <michael@thelayzells.com>"]
+
+[dependencies]
+unsauron = { path = ".." }
